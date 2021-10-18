@@ -1,1 +1,5 @@
-docker build --tag noregistry/php-base .
+# docker-php-base
+
+Wprk in progress!
+
+Replacing the kool docker images

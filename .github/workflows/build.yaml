@@ -1,0 +1,27 @@
+name: Build
+
+on:
+  workflow_dispatch:
+
+  push:
+    branches:
+      - main
+
+jobs:
+  build-an-publish:
+    runs-on: self-hosted
+    env:
+      GITHUB_USERNAME: dummy
+      GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+    name: build and push
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+      - name: setup buildtools
+        uses: buildtool/setup-buildtools-action@v0
+      - name: build
+        uses: buildtool/setup-buildtools-action@v0
+      - run: build
+      - name: push
+        uses: buildtool/setup-buildtools-action@v0
+      - run: push
