@@ -1,5 +1,5 @@
 #FROM php:7.4.19-fpm-alpine3.12
-FROM php:7.4-fpm-alpine3.14
+FROM php:7.4.22-fpm-alpine3.14
 
 ENV ASUSER= \
     UID= \
